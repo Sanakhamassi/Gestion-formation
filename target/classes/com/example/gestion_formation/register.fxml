@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestion_formation.registerController">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="700.0" style="-fx-background-color: FF9B40;">
+         <children>
+            <ImageView fx:id="iconId" fitHeight="60.0" fitWidth="70.0" layoutX="180.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../registered .png" />
+               </image>
+            </ImageView>
+            <Label layoutX="253.0" layoutY="17.0" prefHeight="35.0" prefWidth="310.0" text="User Registration form" textFill="#fffafa">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="20.0" layoutY="109.0" prefHeight="26.0" prefWidth="132.0" text="User Name :" textFill="BLUEVIOLET">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="159.0" text="Password :" textFill="BLUEVIOLET">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="222.0" text="Confirm password :" textFill="BLUEVIOLET">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userId" layoutX="182.0" layoutY="107.0" prefHeight="30.0" prefWidth="198.0" promptText="Username" />
+      <Button layoutX="204.0" layoutY="362.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="132.0" style="-fx-background-color: FF9B40;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="204.0" layoutY="362.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: FF9B40;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="22.0" layoutY="270.0" text="Role : " textFill="BLUEVIOLET">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combo" layoutX="182.0" layoutY="270.0" onAction="#Select" prefHeight="26.0" prefWidth="198.0" promptText="Role" />
+      <PasswordField fx:id="passId" layoutX="182.0" layoutY="157.0" prefHeight="30.0" prefWidth="198.0" promptText="Password" />
+      <PasswordField fx:id="confirmpassId" layoutX="182.0" layoutY="220.0" prefHeight="30.0" prefWidth="198.0" promptText="Confirm Password" />
+      <ImageView fx:id="registerId" fitHeight="306.0" fitWidth="297.0" layoutX="389.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../assets/regist.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelMsg" layoutX="87.0" layoutY="315.0" prefHeight="11.0" prefWidth="234.0" textFill="#5ab448">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="passmatchid" layoutX="186.0" layoutY="200.0" prefHeight="11.0" prefWidth="234.0" textFill="#ea0d4b">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="confirmButton" layoutX="27.0" layoutY="362.0" mnemonicParsing="false" onAction="#registerButtonevent" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: FF9B40;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

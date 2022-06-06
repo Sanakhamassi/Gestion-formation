@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestion_formation.loginController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="280.0" style="-fx-background-color: #8A2BE2;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="loginImg" fitHeight="303.0" fitWidth="295.0" layoutX="2.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../assets/Tablet login.gif" />
+               </image>
+            </ImageView>
+            <Label layoutX="27.0" layoutY="343.0" prefHeight="54.0" prefWidth="270.0" text="Tap and learn " textAlignment="RIGHT" textFill="#ff9b40">
+               <font>
+                  <Font name="Bauhaus 93" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="407.0" prefWidth="420.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="lockImg" fitHeight="64.0" fitWidth="64.0" layoutX="169.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../assets/padlock.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="61.0" layoutY="175.0" prefHeight="26.0" prefWidth="98.0" text="Username" textFill="BLUEVIOLET">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTextfield" layoutX="157.0" layoutY="176.0" prefHeight="27.0" prefWidth="178.0" promptText="Username" />
+            <Label layoutX="61.0" layoutY="239.0" text="Password" textFill="BLUEVIOLET">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="64.0" layoutY="309.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="43.0" prefWidth="280.0" style="-fx-background-color: #ff9b40;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Label layoutX="61.0" layoutY="375.0" prefHeight="30.0" prefWidth="246.0" text="You do not have an account ?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="247.0" layoutY="379.0" onAction="#registerForm" text="Sign Up" textFill="#ff9b40" />
+            <PasswordField fx:id="passwordText" layoutX="157.0" layoutY="239.0" prefHeight="23.0" prefWidth="181.0" promptText="Password" />
+            <Label fx:id="loginMsgLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="277.0" prefHeight="24.0" prefWidth="256.0" textFill="#fc0000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

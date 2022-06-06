@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="635.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestion_formation.dashController">
+   <children>
+      <VBox prefHeight="635.0" prefWidth="288.0" style="-fx-background-color: #8a2be2;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="title" alignment="CENTER" layoutX="14.0" layoutY="64.0" prefHeight="54.0" prefWidth="270.0" text="Tap and learn " textAlignment="RIGHT" textFill="#ff9b40">
+                     <font>
+                        <Font name="Bauhaus 93" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnPar" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="40.0" prefWidth="295.0" stylesheets="@../../../style.css" text="Manage participants" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="parId" fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../assets/group.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnCour" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="40.0" prefWidth="295.0" stylesheets="@../../../style.css" text="Manage Courses" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="courId" fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../assets/online-learning.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnForm" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="40.0" prefWidth="295.0" stylesheets="@../../../style.css" text="Manage Formers" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="teachId" fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../assets/classroom.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnDom" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="40.0" prefWidth="295.0" stylesheets="@../../../style.css" text="Mnage domains" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="domId" fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../assets/profession.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleClick" prefHeight="40.0" prefWidth="295.0" stylesheets="@../../../style.css" text="Signout" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="homeId" fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../assets/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="297.0" layoutY="219.0" prefHeight="398.0" prefWidth="650.0">
+         <children>
+            <StackPane>
+               <children>
+                  <GridPane fx:id="gridCourses" prefHeight="374.0" prefWidth="650.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="650.4" minWidth="10.0" prefWidth="644.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.60003662109375" minWidth="0.0" prefWidth="7.2000000000000455" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="280.8" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="280.8" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="330.399984741211" minHeight="0.0" prefHeight="306.40000000000003" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="47.59995117187498" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TableView fx:id="courseTable" prefHeight="310.0" prefWidth="638.0" stylesheets="@../../../style.css" GridPane.rowIndex="2">
+                           <columns>
+                              <TableColumn fx:id="col_traincode" prefWidth="61.5999755859375" text="Code" />
+                              <TableColumn fx:id="col_lib" minWidth="0.0" prefWidth="134.39996337890625" text="Entitled" />
+                              <TableColumn fx:id="col_dom" prefWidth="81.5999755859375" text="Domain" />
+                              <TableColumn fx:id="col_nbj" prefWidth="34.4000244140625" text="Nb Days" />
+                              <TableColumn fx:id="col_year" minWidth="6.39996337890625" prefWidth="63.99993896484375" text="Year" />
+                              <TableColumn fx:id="col_month" minWidth="0.0" prefWidth="54.4000244140625" text="Month" />
+                              <TableColumn fx:id="col_former" prefWidth="100.7999267578125" text="Former" />
+                              <TableColumn fx:id="col_nbpar" minWidth="0.0" prefWidth="40.0" text="NbP" />
+                              <TableColumn fx:id="col_action3" prefWidth="69.60002441406255" text="Action" />
+                           </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="650.0" spacing="20.0" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="searchImg1" fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../assets/search.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField prefHeight="27.0" prefWidth="191.0" style="-fx-border-color: #8a2be2;" />
+                              <Button fx:id="btnId" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="182.0" style="-fx-border-color: #8a2be2;" stylesheets="@../../../style.css" text="Add new course" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="plusImg1" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../assets/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="gridDomain" prefHeight="355.0" prefWidth="650.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="650.4" minWidth="10.0" prefWidth="650.4" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.60003662109375" minWidth="0.0" prefWidth="0.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="280.8" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="280.8" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="330.399984741211" minHeight="0.0" prefHeight="306.40000000000003" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="47.59995117187498" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TableView fx:id="tableDomain" prefHeight="295.0" prefWidth="638.0" stylesheets="@../../../style.css" GridPane.rowIndex="2">
+                           <columns>
+                              <TableColumn fx:id="col_code" prefWidth="211.99993896484375" text="Domain Code" />
+                              <TableColumn fx:id="col_name" minWidth="0.0" prefWidth="281.6000061035156" text="Entitled" />
+                              <TableColumn fx:id="col_action4" minWidth="0.0" prefWidth="156.0" text="Action" />
+                           </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="650.0" spacing="20.0" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="searchImg3" fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../assets/search.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField prefHeight="27.0" prefWidth="191.0" style="-fx-border-color: #8a2be2;" />
+                              <Button fx:id="addDomBtn" graphicTextGap="10.0" mnemonicParsing="false" onAction="#getAddView" prefHeight="29.0" prefWidth="182.0" style="-fx-border-color: #8a2be2;" stylesheets="@../../../style.css" text="Add new Domain" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="plusImg3" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../assets/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="refDomBtn" graphicTextGap="10.0" mnemonicParsing="false" onAction="#refreshEvent" prefHeight="30.0" prefWidth="58.0" style="-fx-background-radius: 500;" stylesheets="@../../../style.css" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="updateImg1" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../assets/refresh.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="gridFormer" prefHeight="374.0" prefWidth="710.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="650.4" minWidth="10.0" prefWidth="650.4" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.60003662109375" minWidth="0.0" prefWidth="0.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="280.8" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="280.8" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="330.399984741211" minHeight="0.0" prefHeight="306.40000000000003" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="47.59995117187498" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TableView fx:id="formerTable" prefHeight="310.0" prefWidth="698.0" stylesheets="@../../../style.css" GridPane.rowIndex="2">
+                           <columns>
+                              <TableColumn fx:id="col_codeformer" prefWidth="82.4000244140625" text="Former code" />
+                              <TableColumn fx:id="col_fn" minWidth="0.0" prefWidth="91.20001220703125" text="Firstname" />
+                              <TableColumn fx:id="col_ln" prefWidth="78.39996337890625" text="Lastname" />
+                              <TableColumn fx:id="col_domain" prefWidth="98.4000244140625" text="Domain" />
+                              <TableColumn fx:id="col_mail" prefWidth="115.199951171875" text="Mail" />
+                              <TableColumn fx:id="col_phone" prefWidth="82.4000244140625" text="Phone" />
+                              <TableColumn fx:id="col_action2" prefWidth="98.39999999999998" text="Action" />
+                           </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="650.0" spacing="20.0" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="searchImg2" fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../assets/search.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField prefHeight="27.0" prefWidth="191.0" style="-fx-border-color: #8a2be2;" />
+                              <Button fx:id="addForbtn" graphicTextGap="10.0" mnemonicParsing="false" onAction="#getAddView" prefHeight="29.0" prefWidth="182.0" style="-fx-border-color: #8a2be2;" stylesheets="@../../../style.css" text="Add new former" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="plusImg2" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../assets/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="refForbtn" graphicTextGap="10.0" mnemonicParsing="false" onAction="#refreshEvent" prefHeight="30.0" prefWidth="58.0" style="-fx-background-radius: 500;" stylesheets="@../../../style.css" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="updateImg2" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../assets/refresh.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="gridParticipant" prefHeight="355.0" prefWidth="650.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="650.4" minWidth="10.0" prefWidth="650.4" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.60003662109375" minWidth="0.0" prefWidth="0.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="280.8" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="280.8" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="330.399984741211" minHeight="0.0" prefHeight="306.40000000000003" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="47.59995117187498" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TableView fx:id="parTable" prefHeight="295.0" prefWidth="638.0" stylesheets="@../../../style.css" GridPane.rowIndex="2">
+                          <columns>
+                            <TableColumn fx:id="col_mat" prefWidth="150.39996337890625" text="Registration Number" />
+                            <TableColumn fx:id="col_nom" minWidth="0.0" prefWidth="81.60000610351562" text="Firstname" />
+                              <TableColumn fx:id="col_pre" prefWidth="75.0" text="Lastname" />
+                              <TableColumn fx:id="col_date" prefWidth="116.0" text="Date of birth" />
+                              <TableColumn fx:id="col_profil" prefWidth="89.5999755859375" text="Profil " />
+                              <TableColumn fx:id="col_action" prefWidth="136.7998046875" text="Action" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="650.0" spacing="20.0" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fx:id="searchImg" fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../assets/search.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField prefHeight="27.0" prefWidth="191.0" style="-fx-border-color: #8a2be2;" />
+                              <Button fx:id="addParbtn" graphicTextGap="10.0" mnemonicParsing="false" onAction="#getAddView" prefHeight="29.0" prefWidth="182.0" style="-fx-border-color: #8a2be2;" stylesheets="@../../../style.css" text="Add new Participant" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="plusImg" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../assets/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="refParBtn" graphicTextGap="10.0" mnemonicParsing="false" onAction="#refreshEvent" prefHeight="30.0" prefWidth="58.0" style="-fx-background-radius: 500;" stylesheets="@../../../style.css" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fx:id="updateImg" fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../assets/refresh.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </StackPane>
+         </children></VBox>
+      <Pane fx:id="gridHome" layoutX="288.0" layoutY="96.0" prefHeight="102.0" prefWidth="700.0" style="-fx-background-color: #8a2be2;">
+         <children>
+            <Label fx:id="titleLabel" alignment="CENTER" layoutX="14.0" layoutY="24.0" prefHeight="54.0" prefWidth="182.0" text="Participants" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="554.0" prefWidth="478.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestion_formation.addForController">
+   <children>
+      <Pane prefHeight="72.0" prefWidth="477.0" style="-fx-background-color: #ff9b40;">
+         <children>
+            <Label fx:id="title" alignment="CENTER" layoutX="51.0" layoutY="9.0" prefHeight="54.0" prefWidth="376.0" text="Add new Former" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="47.0" layoutY="211.0" text="Domain" textFill="BLUEVIOLET">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="117.0" text="Firstname:" textFill="BLUEVIOLET">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="165.0" text="Lastname:" textFill="BLUEVIOLET">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="260.0" text="Mail : " textFill="BLUEVIOLET">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="315.0" text="Phone :" textFill="BLUEVIOLET">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstnTextfield" layoutX="232.0" layoutY="118.0" prefHeight="26.0" prefWidth="175.0" promptText="Firstname" />
+      <TextField fx:id="lastnTextfielf" layoutX="232.0" layoutY="165.0" prefHeight="27.0" prefWidth="175.0" promptText="Lastname" />
+      <TextField fx:id="phoneTextfield" layoutX="228.0" layoutY="318.0" prefHeight="26.0" prefWidth="182.0" promptText="phone number" />
+      <Button fx:id="confirmBtn" layoutX="55.0" layoutY="398.0" mnemonicParsing="false" onAction="#confirmbutoon" prefHeight="38.0" prefWidth="353.0" style="-fx-background-color: #ff9b40;" text="Confirm" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelBtn" layoutX="55.0" layoutY="453.0" mnemonicParsing="false" onAction="#Cancelbutton" prefHeight="38.0" prefWidth="353.0" style="-fx-background-color: #ff9b40;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="domainCombo" layoutX="232.0" layoutY="212.0" onAction="#Select" prefHeight="27.0" prefWidth="175.0" />
+      <TextField fx:id="mailTextfield" layoutX="232.0" layoutY="265.0" prefHeight="27.0" prefWidth="175.0" promptText="Adress mail" />
+   </children>
+</AnchorPane>
